@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url(./배경.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+
+        h1 {
+            font-size: 70px;
+            text-align: center;
+            transition: all 0.8s ease;
+            filter: drop-shadow(10px 10px 8px white);
+            font-style: italic;
+        }
+
+        h1:hover {
+            scale: 1.3;
+            color: white;
+        }
+
+        h1:active {
+            color: yellow;
+        }
+
+        table {
+            border: 1px solid black;
+            border-left: 0px;
+            border-right: 0px;
+            width: 100%;
+            height: 40vh;
+            text-align: center;
+        }
+
+        .line {
+            font-size: 30px;
+        }
+
+        .weather {
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        .hot {
+            transition: all 0.4s ease;
+        }
+
+        .hot:hover {
+            color: red;
+        }
+
+        .cool {
+            color: rgb(86, 84, 84);
+            transition: all 0.4s ease;
+        }
+
+        .cool:hover {
+            color: blue;
+        }
+
+        .img {
+            width: 300px;
+            height: 35vh;
+            transition: all ease 0.8s;
+            animation: animate 0.5s steps(10, jump-none) alternate infinite
+        }
+
+        @keyframes animate {
+            from {
+                filter: blur(5px) drop-shadow(10px 15px 10px gray);
+            }
+
+            to {
+                filter: blur(5px);
+            }
+        }
+
+        .img:hover {
+            scale: 1.1;
+            filter: contrast(2) drop-shadow(30px 20px 40px black);
+        }
+
+        td {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td>.right {
+            border-right: 0px;
+        }
+
+        .png {
+            transition: all 0.8s ease;
+        }
+
+        .png:hover {
+            rotate: 360deg;
+            scale: 1.5;
+        }
+
+        .em {
+            font-size: 130%;
+        }
+
+        .sun {
+            transition: all 0.4s ease;
+        }
+
+        .sun:hover {
+            color: red;
+            scale: 1.5;
+        }
+
+        .sat {
+            transition: all 0.4s ease;
+        }
+
+        .c:hover {
+            text-decoration: underline;
+        }
+
+        .sat:hover {
+            color: blue;
+            scale: 1.5;
+        }
+
+        .hc {
+            top: 40;
+            bottom: 40;
+        }
+
+        .a {
+            font-size: 25px;
+            color: rgb(120, 115, 115);
+            text-align: center;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        .g {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item {
+            transition: all 2s ease;
+        }
+
+        .item:hover {
+            color: yellow;
+            filter: hue-rotate(360deg);
+            text-decoration: underline;
+        }
+
+        .c:active {
+            color: orange;
+            filter: hue-rotate(360deg);
+            transition: all 2s ease;
+        }
+
+        div:hover {
+            cursor: pointer;
+        }
+
+        div::selection {
+            color: red;
+        }
+
+        .date {
+            color: rgb(217, 255, 201);
+            font-size: 20px;
+            padding: 25px;
+            transition: all 3s ease;
+        }
+
+        .date:active {
+            color: paleturquoise;
+        }
+        .png{
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g">
+        <div class="date"></div>
+        <div>
+            <a href="https://www.google.com/search?q=%EB%82%A0%EC%94%A8&rlz=1C1IBEF_koKR962KR962&oq=&aqs=chrome.1.35i39i362l8.763j0j15&sourceid=chrome&ie=UTF-8"
+                class="a">https://www.google.com/search?</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>안산시</h1>
+
+        <div class="weather">
+            <img src="./구름.png" class="img">
+            <div class="hc">
+                <div class="hot">최고 31°</div>
+                <div class="cool">최저 24°</div>
+            </div>
+        </div>
+
+
+        <table>
+            <tr class="line">
+                <th class="c sun">일</th>
+                <th class="item mon">월</th>
+                <th class="item tue">화</th>
+                <th class="item wed">수</th>
+                <th class="item thu">목</th>
+                <th class="item fri">금</th>
+                <th class="c sat">토</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="./구름.png" class="png">
+                    <div class="em">24°~31°</div>
+                </td>
+                <td>
+                    <img src="./비.png" class="png">
+                    <div class="em">24°~32°</div>
+                </td>
+                <td>
+                    <img src="./비.png" class="png">
+                    <div class="em">25°~30°</div>
+                </td>
+                <td>
+                    <img src="./비.png" class="png">
+                    <div class="em">24°~28°</div>
+                </td>
+                <td>
+                    <img src="./비.png" class="png">
+                    <div class="em">24°~29°</div>
+                </td>
+                <td>
+                    <img src="./비.png" class="png">
+                    <div class="em">23°~29°</div>
+                </td>
+                <td>
+                    <img src="./해.png" class="png right">
+                    <div class="em">23°~29°</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        const div = document.querySelector('.date');
+        const getD = (now) => {
+            const d = new Date(now);
+            const 년 = d.getFullYear();
+            const 월 = d.getMonth() + 1;
+            const 일 = d.getDate();
+            const 시 = d.getHours();
+            const 분 = d.getMinutes();
+            const 초 = d.getSeconds();
+            return `현재시각 : ${년}년 ${월}월 ${일}일 ${시}시 ${분}분 ${초}초`;
+        };
+        setInterval(() => {
+            div.innerHTML = getD(Date.now());
+        }, 1000);
+    </script>
+</body>
+
+</html>
